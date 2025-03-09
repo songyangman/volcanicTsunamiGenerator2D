@@ -30,3 +30,6 @@ water depth: 1.03~1.27m
 // (time ((xTrans yTrans zTrans) (xRot yRot zRot)))  // 주석은 파일 내에 포함되지 않아야 함
 
 
+0309
+
+VTG 영역을 줄였음. 덩달아 block2와 block4도 이에 맞도록 줄임
