@@ -30,3 +30,6 @@ water depth: 1.03~1.27m
 // (time ((xTrans yTrans zTrans) (xRot yRot zRot)))  // 주석은 파일 내에 포함되지 않아야 함
 
 
+0309
+
+background 와 vtg mesh quality 변경
