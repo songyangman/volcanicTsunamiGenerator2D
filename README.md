@@ -33,3 +33,5 @@ water depth: 1.03~1.27m
 0309
 
 background 와 vtg mesh quality 변경
+
+양옆 BC를 relaxation zone으로 변경
