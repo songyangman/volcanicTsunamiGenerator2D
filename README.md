@@ -34,4 +34,8 @@ water depth: 1.03~1.27m
 
 background 와 vtg mesh quality 변경
 
-양옆 BC를 relaxation zone으로 변경
+양옆 BC를 relaxation zone으로 변경(실패)
+
+3D로 만들고 moving object를 실린더(원형) 모양으로.
+
+이거 만들면 그 다음에는background까지 수정하기
