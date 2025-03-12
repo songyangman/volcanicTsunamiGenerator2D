@@ -21,12 +21,12 @@ defaultFieldValues
 );
 
 X0		 -10;
-Y0		 -20;
-Z0		 -10;
+Y0		 -10;
+Z0		 -20;
 
 X1		 10;
-Y1		 1.1; //1.14;1.17;1.20
-Z1		 10;
+Y1		 10;
+Z1		 1.1; //1.14;1.17;1.20
 
 
 // X2  
@@ -45,14 +45,6 @@ regions
     }
 
 
-    // boxToCell
-    // {
-    //     box (-2 0 -0.01) (2 2 0.01);
-    //     fieldValues 
-    //     ( 
-    //         volScalarFieldValue alpha.water 0
-    //     );
-    // }
 
     cellToCell
     {

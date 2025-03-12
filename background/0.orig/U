@@ -22,7 +22,7 @@ boundaryField
 {
     #includeEtc "caseDicts/setConstraintTypes"
 
-    "(left_1|bottom_1|right_3|bottom_3|left_4|right_4|bottom_4)"
+    "(left_1|bottom_1|right_3|bottom_3|left_4|right_4|bottom_4|walls)"
     {
         type            noSlip;
     }

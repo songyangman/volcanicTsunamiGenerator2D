@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v1906                                 |
+|  \\    /   O peration     | Version:  v2406                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -14,16 +14,11 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-X0	-0.6;
-Y0	-1.6;
-Z0	-0.01;
-
-X1	0.6;
-Y1	0.7;//초반에 잠겨있는 깊이인 0.725여야 함. 근데 이게 해상도상 잘 표현이 되야됨
-Z1	0.01;
-
-//blockMesh 옆으로 3칸 이상 띄워져 있지 않으면 솔버가 작동 안함.
-//blockMesh가 -1.8~1.8이므로 구멍은 -1.2~1.2최대임(셀 하나 간격이 0.2)
+Xcenter	0.0;      // 원통 중심 X 좌표
+Ycenter	0.0;      // 원통 중심 Y 좌표
+Zmin	-1.4;     // 원통의 시작 깊이 (bottom)
+Zmax	0.7;      // 원통의 끝 높이 (top)
+Radius	0.45;      // 원의 반지름
 
 actions
 (
@@ -31,8 +26,10 @@ actions
         name    c0;
         type    cellSet;
         action  new;
-        source  boxToCell;
-        box     ($X0 $Y0 $Z0) ($X1 $Y1 $Z1);
+        source  cylinderToCell;
+        point1  ($Xcenter $Ycenter $Zmin);  // 원통 시작점
+        point2  ($Xcenter $Ycenter $Zmax);  // 원통 끝점
+        radius  $Radius;
     }
 
     {

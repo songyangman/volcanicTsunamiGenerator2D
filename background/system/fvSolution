@@ -64,6 +64,17 @@ solvers
         relTol          0;
     }
 
+    p
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-06;
+        relTol          0;
+        pRefCell        0;        // 기준 셀 0번을 압력 기준으로 설정
+        // 또는, 기준 좌표를 지정하는 방법:
+        // pRefPoint    (0 0 0);
+    }
+
     "(U|k|epsilon).*"
     {
         solver          smoothSolver;
@@ -79,6 +90,10 @@ PIMPLE
     nOuterCorrectors    2;
     nCorrectors         3;
     nNonOrthogonalCorrectors 0;
+
+    pRefCell        0;
+    pRefPoint    (0 0 0);
+    pRefValue       0;
 
     ddtCorr                    yes;
     correctPhi                 no;
