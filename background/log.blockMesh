@@ -1,0 +1,118 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Mar 18 2025
+Time   : 21:04:02
+Host   : Coastal-song
+PID    : 18278
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2406/run/volcanicTsunamiGenerator2D_1/background
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 24
+		Number of defined boundary faces : 24
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.05 .. 0.05
+        j : 0.05 .. 0.05
+        k : 0.002 .. 0.002
+
+    Block 1 cell size :
+        i : 0.0125 .. 0.0125
+        j : 0.0125 .. 0.0125
+        k : 0.002 .. 0.002
+
+    Block 2 cell size :
+        i : 0.05 .. 0.05
+        j : 0.05 .. 0.05
+        k : 0.002 .. 0.002
+
+    Block 3 cell size :
+        i : 0.0125 .. 0.0125
+        j : 0.0125 .. 0.0125
+        k : 0.002 .. 0.002
+
+Merging 3 patch pairs
+    Adding point and face zones
+    Merging with attachPolyTopoChanger
+Removed 6 empty merged patches:
+    (bottom_2 left_2 left_3 right_1 right_2 top_4)
+Removed 2 empty point zones:
+    (bottom_2top_42CutPointZone right_2left_31CutPointZone)
+Removed 6 empty merged face zones:
+    (bottom_2top_42CutFaceZone bottom_2top_42Side1Zone right_1left_20Side0Zone right_1left_20Side1Zone right_2left_31CutFaceZone right_2left_31Side1Zone)
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-5 -1.65 -0.001) (5 15 0.001)
+  nPoints: 384678
+  nCells: 190728
+  nFaces: 764522
+  nInternalFaces: 381646
+----------------
+Face Zones
+----------------
+  zone 0 (size: 1200) name: right_1left_20CutFaceZone
+  zone 1 (size: 1200) name: right_2left_31Side0Zone
+  zone 2 (size: 104) name: bottom_2top_42Side0Zone
+----------------
+Point Zones
+----------------
+  zone 0 (size: 1800) name: right_1left_20CutPointZone
+----------------
+Patches
+----------------
+  patch 0 (start: 381646 size: 300) name: left_1
+  patch 1 (start: 381946 size: 52200) name: frontAndBack_1
+  patch 2 (start: 434146 size: 87) name: top_1
+  patch 3 (start: 434233 size: 87) name: bottom_1
+  patch 4 (start: 434320 size: 249600) name: frontAndBack_2
+  patch 5 (start: 683920 size: 104) name: top_2
+  patch 6 (start: 684024 size: 300) name: right_3
+  patch 7 (start: 684324 size: 52200) name: frontAndBack_3
+  patch 8 (start: 736524 size: 87) name: top_3
+  patch 9 (start: 736611 size: 87) name: bottom_3
+  patch 10 (start: 736698 size: 132) name: left_4
+  patch 11 (start: 736830 size: 132) name: right_4
+  patch 12 (start: 736962 size: 27456) name: frontAndBack_4
+  patch 13 (start: 764418 size: 104) name: bottom_4
+
+End
+
