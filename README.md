@@ -1,4 +1,12 @@
 VTG movement 구현에 성공하였음.
+
+!!햇갈리지 말것
+This GIT repository is about VTG simulator code and other useful informations.
+main branch is for 2D case
+dev branch is for 3D cylindrical case
+DO NOT CONFUSE FOR OVERWRITE
+
+
 1. VTG size와 movement설정
 -현재 진행중
 -background에 임의로 설정한 moving region과 movingObject의 크기, interpolation zone 이 서로 적당한 거리에 있는지, hole과의 거리와 interpolation cell layers(thickness)가 충분하거나 너무 과하지 않는지
