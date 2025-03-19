@@ -1,0 +1,45 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Mar 19 2025
+Time   : 20:55:27
+Host   : Coastal-song
+PID    : 27947
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2406/run/volcanicTsunamiGenerator2D_1/background
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created cellSet c1
+    Applying source regionToCell
+    Adding all cells of connected region containing points 1((-1.5 0.5 0.0005)) ...
+    Found location (-1.5 0.5 0.0005) in cell 852 on processor 0 in global region 0 out of 2 regions.
+    cellSet c1 now size 190728
+Created cellSet c2
+    Applying source cellToCell
+    Adding all elements of cell sets: (c1)
+    cellSet c2 now size 190728
+Read set cellSet c2 size:190728
+    Inverting cellSet
+    cellSet c2 now size 1728
+
+End
+

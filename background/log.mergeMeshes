@@ -1,0 +1,202 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : mergeMeshes . ../movingObject -overwrite
+Date   : Mar 19 2025
+Time   : 20:55:24
+Host   : Coastal-song
+PID    : 27946
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2406/run/volcanicTsunamiGenerator2D_1/background
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Master:      "/home/song/OpenFOAM/song-v2406/run/volcanicTsunamiGenerator2D_1/background"  region region0
+mesh to add: "../movingObject"  region region0
+
+Create Times
+Reading master mesh for time = 0
+Create mesh
+
+Reading mesh to add for time = 0
+Create mesh
+
+Writing combined mesh to 0
+patch names: 
+17
+(
+left_1
+frontAndBack_1
+top_1
+bottom_1
+frontAndBack_2
+top_2
+right_3
+frontAndBack_3
+top_3
+bottom_3
+left_4
+right_4
+frontAndBack_4
+bottom_4
+oversetPatch
+frontAndBack
+movingObject
+)
+
+patch dicts: 
+17
+(
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          300;
+    startFace       381646;
+}
+
+
+{
+    type            empty;
+    inGroups        1 ( empty );
+    nFaces          52200;
+    startFace       381946;
+}
+
+
+{
+    type            patch;
+    nFaces          87;
+    startFace       434146;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          87;
+    startFace       434233;
+}
+
+
+{
+    type            empty;
+    inGroups        1 ( empty );
+    nFaces          249600;
+    startFace       434320;
+}
+
+
+{
+    type            patch;
+    nFaces          104;
+    startFace       683920;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          300;
+    startFace       684024;
+}
+
+
+{
+    type            empty;
+    inGroups        1 ( empty );
+    nFaces          52200;
+    startFace       684324;
+}
+
+
+{
+    type            patch;
+    nFaces          87;
+    startFace       736524;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          87;
+    startFace       736611;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          132;
+    startFace       736698;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          132;
+    startFace       736830;
+}
+
+
+{
+    type            empty;
+    inGroups        1 ( empty );
+    nFaces          27456;
+    startFace       736962;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          104;
+    startFace       764418;
+}
+
+
+{
+    type            overset;
+    inGroups        1 ( overset );
+    nFaces          588;
+    startFace       2880;
+}
+
+
+{
+    type            empty;
+    inGroups        1 ( empty );
+    nFaces          3456;
+    startFace       3468;
+}
+
+
+{
+    type            wall;
+    inGroups        1 ( wall );
+    nFaces          564;
+    startFace       6924;
+}
+
+)
+
+point zone names: 1(right_1left_20CutPointZone)
+face zone names: 3(right_1left_20CutFaceZone right_2left_31Side0Zone bottom_2top_42Side0Zone)
+cell zone names: 1(movingZone)
+Copying old patches
+Adding new patches. 
+Adding new cellZones.
+Reordering processor patches last
+End
+
