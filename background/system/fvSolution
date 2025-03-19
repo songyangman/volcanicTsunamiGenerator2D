@@ -47,8 +47,8 @@ solvers
     {
         solver          PBiCGStab;
         preconditioner  DILU;
-        tolerance       1e-8;
-        relTol          0.01;
+        tolerance       1e-10;
+        relTol          0.001;
     }
 
     p_rghFinal
@@ -77,8 +77,8 @@ PIMPLE
 {
     momentumPredictor   no;
     nOuterCorrectors    2;
-    nCorrectors         5;
-    nNonOrthogonalCorrectors 0;
+    nCorrectors         3;
+    nNonOrthogonalCorrectors 2;
 
     ddtCorr                    yes;
     correctPhi                 no;
