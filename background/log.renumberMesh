@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh -parallel -overwrite
+Date   : Mar 21 2025
+Time   : 15:18:35
+Host   : Coastal-song
+PID    : 1629
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2406/run/volcanicTsunamiGenerator2D_1/background
+nProcs : 32
+Hosts  :
+(
+    (Coastal-song 32)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Mesh region0 size: 349160
+Before renumbering
+    band           : 10624
+    profile        : 3.884272e+07
+
+Using renumber-method: CuthillMcKee [default]
+
+Reading fields
+    volScalarField: alpha.water epsilon k nut p_rgh zoneID
+    volVectorField: U
+    pointVectorField: pointDisplacement
+Reading cellSet: c1 c2
+
+Renumbering processor cell decomposition map cellProcAddressing
+Renumbering processor face decomposition map faceProcAddressing
+Renumbering processor point decomposition map pointProcAddressing
+After renumbering
+    band           : 174
+    profile        : 2.684168e+07
+
+Writing mesh to "constant"
+
+Timings:
+    read mesh   : 0.08161031
+    read fields : 0.007074552
+    decompose   : 0
+    cell-cells  : 0
+    renumber    : 0.004160463
+    write       : 0.1692328
+TotalTime = 0.3411351 s
+
+ExecutionTime = 0.35 s  ClockTime = 1 s
+
+End
+
+Finalising parallel run
