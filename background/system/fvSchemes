@@ -57,8 +57,8 @@ oversetInterpolation
     method          inverseDistance;
     searchBox (-0.65 -1.6625 -0.1) (0.65 1.5 0.1);
     searchBoxDivisions  (1000 1000 1);
-    // holeLayers          4;
-    // useLayer            2;
+    // holeLayers          2;
+    // useLayer            3;
 }
 
 oversetInterpolationSuppressed
