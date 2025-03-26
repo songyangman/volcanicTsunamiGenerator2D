@@ -60,7 +60,7 @@ solvers
     "pcorr.*"
     {
         $p_rghFinal;
-        preconditioner  DIC;
+        preconditioner  DILU;//DIC;
         relTol          0;
     }
 
@@ -81,10 +81,10 @@ PIMPLE
     nNonOrthogonalCorrectors 2;
 
     ddtCorr                    yes;
-    correctPhi                 no;
+    correctPhi                 yes;//no;
     checkMeshCourantNo  yes;
 
-    moveMeshOuterCorrectors no;
+    moveMeshOuterCorrectors yes;//no;
     turbOnFinalIterOnly no;
 
     oversetAdjustPhi    no;
@@ -93,7 +93,7 @@ PIMPLE
 relaxationFactors
 {
     fields
-    {   p_rgh   0.3;
+    {   //p_rgh   0.3;
     }
     equations
     {
