@@ -9,20 +9,34 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      turbulenceProperties;
+    class       volScalarField;
+    object      omega;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-simulationType  RAS;
+dimensions      [0 0 -1 0 0 0 0];
 
-RAS
+internalField   uniform 0.1;
+
+boundaryField
 {
-    RASModel        kOmega;//kEpsilon;
+    #includeEtc "caseDicts/setConstraintTypes"
 
-    turbulence      on;
-
-    printCoeffs     on;
+    "(left_1|bottom_1|right_3|bottom_3|left_4|right_4|bottom_4)"
+    {
+        type            omegaWallFunction;
+        value           uniform 0.1;
+    }
+    "(top_1|top_2|top_3|top_4|bottom_2|right_1|left_2|right_2|left_3)"
+    {
+        type            zeroGradient;
+    }
+    movingObject
+    {
+        type            omegaWallFunction;
+        value           uniform 0.1;
+    }
 }
 
 // ************************************************************************* //
+

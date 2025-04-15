@@ -12,9 +12,9 @@ echo "Start Running"
 echo "Decompose case on 32 cores"
 (cd background && decomposePar -force > log.decomposePar)
 echo "RenumberMesh for parallelisation optimization"
-(cd background && mpirun -np 32 renumberMesh -parallel -overwrite > log.renumberMesh)
+(cd background && mpirun --oversubscribe -np 32 renumberMesh -parallel -overwrite > log.renumberMesh)
 (echo "Run overInterDyMFoam on 32 cores :" && date)
-(cd background && mpirun -np 32 overInterDyMFoam -parallel > log.overInterDyMFoam)
+(cd background && mpirun --oversubscribe -np 32 overInterDyMFoam -parallel > log.overInterDyMFoam)
 (echo "End of solver calculation :" && date)
 
 echo "END Processing"
