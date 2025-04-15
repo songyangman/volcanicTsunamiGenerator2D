@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : b7ce6bf69d-20250319 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : setFields
+Date   : Apr 15 2025
+Time   : 13:31:47
+Host   : DESKTOP-AGOA90S
+PID    : 274590
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2412/run/volcanicTsunamiGenerator2D/background
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading setFieldsDict
+
+Setting volume field default values
+    - set internal values of volScalarField: alpha.water = 0
+    - set internal values of volScalarField: zoneID = 123
+
+Setting field region values
+
+    Adding cells with centre within boxes 1((-10 -20 -10) (10 1.1 10))
+    Selected 41012/353484 cells
+    - set internal values of volScalarField: alpha.water = 1
+    Adding all elements of cell sets: (c1)
+    Selected 351564/353484 cells
+    - set internal values of volScalarField: zoneID = 0
+    Adding all elements of cell sets: (c2)
+    Selected 1920/353484 cells
+    - set internal values of volScalarField: zoneID = 1
+
+End
+

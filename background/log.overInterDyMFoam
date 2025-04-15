@@ -1,0 +1,434 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : b7ce6bf69d-20250319 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : overInterDyMFoam -parallel
+Date   : Apr 15 2025
+Time   : 13:31:57
+Host   : DESKTOP-AGOA90S
+PID    : 274840
+I/O    : uncollated
+Case   : /home/song/OpenFOAM/song-v2412/run/volcanicTsunamiGenerator2D/background
+nProcs : 32
+Hosts  :
+(
+    (DESKTOP-AGOA90S 32)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting dynamicFvMesh dynamicOversetFvMesh
+Selecting motion solver: multiSolidBodyMotionSolver
+Applying motion to entire mesh
+Selecting solid-body motion function tabulated6DoFMotion
+Applying solid body motion tabulated6DoFMotion to 4988 points of cellZone movingZone
+
+PIMPLE: no residual control data found. Calculations will employ 2 corrector loops
+
+Reading field p_rgh
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating cellMask field to block out hole cells
+
+--> FOAM Warning : 
+    From bool Foam::oversetPolyPatch::master() const
+    in file oversetPolyPatch/oversetPolyPatch.C at line 145
+    The master overset patch is not the first patch. Generally the first patch should be an overset patch to guarantee consistent operation.
+Creating interpolatedCells field 
+
+Reading transportProperties
+
+Selecting incompressible transport model Newtonian
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    RASModel        kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.5555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
+
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+No MRF models present
+
+No finite volume options present
+Reading/calculating face velocity Uf
+
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+Courant Number mean: 0 max: 0
+Interface Courant Number mean: 0 max: 0
+deltaT = 0.0005
+Time = 0.0005
+
+PIMPLE: iteration 1
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 1.82 s
+Mesh Courant Number mean: 0.04801116 max: 25.08
+smoothSolver:  Solving for alpha.water, Initial residual = 1.002591e-16, Final residual = 1.002591e-16, No Iterations 0
+Phase-1 volume fraction = 0.1046374  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046374  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1, Final residual = 0.0007588246, No Iterations 675
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.875792e-06, Final residual = 4.288742e-09, No Iterations 628
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 8.824154e-08, Final residual = 9.411685e-11, No Iterations 248
+time step continuity errors : sum local = 6.463719e-09, global = -3.002e-09, cumulative = -3.002e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.234121e-05, Final residual = 5.595679e-08, No Iterations 658
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.493352e-05, Final residual = 1.130881e-08, No Iterations 212
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.27514e-07, Final residual = 2.187433e-10, No Iterations 464
+time step continuity errors : sum local = 2.841603e-09, global = -1.125853e-09, cumulative = -4.127852e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.0001520203, Final residual = 1.145804e-07, No Iterations 553
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.317574e-06, Final residual = 3.217747e-09, No Iterations 165
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 6.137198e-08, Final residual = 5.030364e-11, No Iterations 368
+time step continuity errors : sum local = 1.23935e-09, global = 5.643137e-10, cumulative = -3.563539e-09
+smoothSolver:  Solving for omega, Initial residual = 0.02159116, Final residual = 6.253147e-09, No Iterations 16
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 9.324318e-09, No Iterations 23
+PIMPLE: iteration 2
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.7 s
+Mesh Courant Number mean: 0.04801116 max: 25.08
+smoothSolver:  Solving for alpha.water, Initial residual = 0.0007552991, Final residual = 4.210788e-11, No Iterations 11
+Phase-1 volume fraction = 0.1046841  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = -4.718665e-126  Max(alpha.water) = 1.000004
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.0003102518, Final residual = 2.829275e-07, No Iterations 334
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.116166e-06, Final residual = 2.264969e-10, No Iterations 634
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.445345e-07, Final residual = 1.25237e-10, No Iterations 213
+time step continuity errors : sum local = 2.199104e-09, global = -1.38674e-09, cumulative = -4.950279e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.045028e-05, Final residual = 3.800614e-08, No Iterations 495
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.610872e-07, Final residual = 2.431177e-10, No Iterations 585
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.612916e-08, Final residual = 9.124905e-11, No Iterations 145
+time step continuity errors : sum local = 1.509128e-09, global = 4.683979e-10, cumulative = -4.481881e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.620034e-05, Final residual = 2.03798e-08, No Iterations 487
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.246383e-07, Final residual = 1.457577e-10, No Iterations 575
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.326369e-09, Final residual = 9.493376e-11, No Iterations 143
+time step continuity errors : sum local = 2.20728e-09, global = 4.748301e-10, cumulative = -4.007051e-09
+smoothSolver:  Solving for omega, Initial residual = 0.01503478, Final residual = 3.037904e-09, No Iterations 14
+smoothSolver:  Solving for k, Initial residual = 0.1264639, Final residual = 7.359544e-09, No Iterations 15
+ExecutionTime = 37.7 s  ClockTime = 38 s
+
+Courant Number mean: 0.5333007 max: 531.6416
+Interface Courant Number mean: 0.001904266 max: 25.59152
+deltaT = 9.398496e-07
+Time = 0.00050094
+
+PIMPLE: iteration 1
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.72 s
+Mesh Courant Number mean: 9.370663e-05 max: 0.04895034
+smoothSolver:  Solving for alpha.water, Initial residual = 1.513972e-06, Final residual = 2.255542e-11, No Iterations 4
+Phase-1 volume fraction = 0.1046835  Min(alpha.water) = -9.881313e-324  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046835  Min(alpha.water) = -9.881313e-324  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.03889275, Final residual = 2.037438e-05, No Iterations 686
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.000916e-05, Final residual = 5.244936e-09, No Iterations 480
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.617322e-07, Final residual = 1.45916e-10, No Iterations 550
+time step continuity errors : sum local = 1.011586e-12, global = 3.077762e-13, cumulative = -4.006743e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.525249e-06, Final residual = 1.393619e-09, No Iterations 630
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.361029e-07, Final residual = 1.211096e-10, No Iterations 378
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.89638e-09, Final residual = 3.554558e-11, No Iterations 104
+time step continuity errors : sum local = 1.921416e-13, global = -7.417431e-14, cumulative = -4.006817e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 6.160864e-08, Final residual = 5.392795e-11, No Iterations 522
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 6.219525e-10, Final residual = 9.416019e-11, No Iterations 39
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.030563e-10, Final residual = 9.86488e-11, No Iterations 1
+time step continuity errors : sum local = 4.390963e-13, global = 2.856201e-13, cumulative = -4.006531e-09
+smoothSolver:  Solving for omega, Initial residual = 0.0002471756, Final residual = 2.654638e-09, No Iterations 6
+smoothSolver:  Solving for k, Initial residual = 0.0006226072, Final residual = 3.909334e-09, No Iterations 6
+PIMPLE: iteration 2
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.74 s
+Mesh Courant Number mean: 9.370663e-05 max: 0.04895034
+smoothSolver:  Solving for alpha.water, Initial residual = 8.297807e-07, Final residual = 1.829808e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = -9.881313e-324  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = -9.881313e-324  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.618392e-06, Final residual = 2.059011e-09, No Iterations 486
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.593904e-08, Final residual = 6.939522e-11, No Iterations 350
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.400891e-09, Final residual = 8.771415e-11, No Iterations 94
+time step continuity errors : sum local = 3.57775e-13, global = -5.788297e-14, cumulative = -4.006589e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.566782e-08, Final residual = 9.954869e-11, No Iterations 464
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.067659e-10, Final residual = 5.244756e-11, No Iterations 206
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.213551e-10, Final residual = 6.30782e-11, No Iterations 1
+time step continuity errors : sum local = 3.753859e-13, global = -1.42455e-13, cumulative = -4.006732e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 7.182743e-10, Final residual = 9.891959e-11, No Iterations 106
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.090246e-10, Final residual = 7.994585e-11, No Iterations 4
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 8.035419e-11, Final residual = 8.035419e-11, No Iterations 0
+time step continuity errors : sum local = 4.218612e-13, global = -1.551873e-14, cumulative = -4.006747e-09
+smoothSolver:  Solving for omega, Initial residual = 1.019726e-06, Final residual = 6.811965e-09, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 1.26745e-06, Final residual = 5.407855e-09, No Iterations 2
+ExecutionTime = 44.41 s  ClockTime = 44 s
+
+Courant Number mean: 0.001067101 max: 1.117989
+Interface Courant Number mean: 3.711671e-06 max: 0.05190862
+deltaT = 8.401686e-07
+Time = 0.00050178
+
+PIMPLE: iteration 1
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.67 s
+Mesh Courant Number mean: 8.377766e-05 max: 0.04376365
+smoothSolver:  Solving for alpha.water, Initial residual = 1.301224e-06, Final residual = 4.165387e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046835  Min(alpha.water) = -4.940656e-324  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046835  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.0003218932, Final residual = 2.82556e-07, No Iterations 622
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.693946e-06, Final residual = 3.925457e-09, No Iterations 344
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.090796e-07, Final residual = 1.975307e-10, No Iterations 206
+time step continuity errors : sum local = 6.945894e-13, global = -5.22302e-13, cumulative = -4.007269e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.665102e-06, Final residual = 1.764008e-09, No Iterations 733
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.704254e-08, Final residual = 8.969168e-11, No Iterations 257
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.222112e-09, Final residual = 9.479641e-11, No Iterations 97
+time step continuity errors : sum local = 2.360601e-13, global = 1.660742e-13, cumulative = -4.007103e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.708879e-08, Final residual = 6.841271e-11, No Iterations 563
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 8.728345e-10, Final residual = 9.980581e-11, No Iterations 34
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.056776e-10, Final residual = 9.717991e-11, No Iterations 16
+time step continuity errors : sum local = 2.56143e-13, global = -1.893394e-13, cumulative = -4.007293e-09
+smoothSolver:  Solving for omega, Initial residual = 0.0002169051, Final residual = 2.380456e-09, No Iterations 6
+smoothSolver:  Solving for k, Initial residual = 0.0005491993, Final residual = 3.514006e-09, No Iterations 6
+PIMPLE: iteration 2
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.72 s
+Mesh Courant Number mean: 8.377766e-05 max: 0.04376365
+smoothSolver:  Solving for alpha.water, Initial residual = 7.803139e-07, Final residual = 1.575458e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = -4.940656e-324  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.058633e-06, Final residual = 1.010779e-09, No Iterations 536
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.85563e-08, Final residual = 6.842238e-11, No Iterations 397
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.871388e-10, Final residual = 5.502186e-11, No Iterations 97
+time step continuity errors : sum local = 8.766706e-14, global = 2.80765e-15, cumulative = -4.00729e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.910785e-08, Final residual = 3.378139e-11, No Iterations 561
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 6.558809e-10, Final residual = 8.830645e-11, No Iterations 52
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.553508e-11, Final residual = 9.553508e-11, No Iterations 0
+time step continuity errors : sum local = 1.898399e-13, global = 2.750065e-14, cumulative = -4.007262e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.030895e-09, Final residual = 3.737125e-11, No Iterations 129
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.023262e-11, Final residual = 5.023262e-11, No Iterations 0
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.023262e-11, Final residual = 5.023262e-11, No Iterations 0
+time step continuity errors : sum local = 1.163152e-13, global = -7.975453e-15, cumulative = -4.00727e-09
+smoothSolver:  Solving for omega, Initial residual = 8.656372e-07, Final residual = 5.720734e-09, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 2.417914e-06, Final residual = 6.106201e-10, No Iterations 3
+ExecutionTime = 50.76 s  ClockTime = 51 s
+
+Courant Number mean: 0.0009920028 max: 1.04829
+Interface Courant Number mean: 3.309175e-06 max: 0.04800228
+deltaT = 8.009968e-07
+Time = 0.000502581
+
+PIMPLE: iteration 1
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.67 s
+Mesh Courant Number mean: 7.988007e-05 max: 0.04172764
+smoothSolver:  Solving for alpha.water, Initial residual = 1.276226e-06, Final residual = 4.090989e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.0002940888, Final residual = 2.582556e-07, No Iterations 619
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 8.418362e-06, Final residual = 6.708455e-09, No Iterations 482
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.023334e-07, Final residual = 8.246071e-11, No Iterations 638
+time step continuity errors : sum local = 1.673361e-13, global = -6.180281e-14, cumulative = -4.007332e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.301653e-06, Final residual = 2.398985e-09, No Iterations 652
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 8.510548e-08, Final residual = 4.625694e-11, No Iterations 502
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.383664e-09, Final residual = 9.831708e-11, No Iterations 22
+time step continuity errors : sum local = 9.979342e-14, global = -1.700774e-14, cumulative = -4.007349e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 5.803779e-08, Final residual = 9.205177e-11, No Iterations 571
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.119903e-09, Final residual = 8.750274e-11, No Iterations 83
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.04667e-10, Final residual = 9.488985e-11, No Iterations 1
+time step continuity errors : sum local = 1.169416e-13, global = -6.095826e-14, cumulative = -4.00741e-09
+smoothSolver:  Solving for omega, Initial residual = 0.0002089068, Final residual = 2.312423e-09, No Iterations 6
+smoothSolver:  Solving for k, Initial residual = 0.0005179553, Final residual = 3.359289e-09, No Iterations 6
+PIMPLE: iteration 2
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.72 s
+Mesh Courant Number mean: 7.988007e-05 max: 0.04172764
+smoothSolver:  Solving for alpha.water, Initial residual = 7.583811e-07, Final residual = 1.34284e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 2.075292e-06, Final residual = 1.480533e-09, No Iterations 565
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 4.732645e-08, Final residual = 9.430798e-11, No Iterations 283
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.053377e-09, Final residual = 8.827927e-11, No Iterations 85
+time step continuity errors : sum local = 1.37975e-13, global = -9.574634e-14, cumulative = -4.007506e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.288325e-08, Final residual = 8.042127e-11, No Iterations 534
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 7.26878e-10, Final residual = 7.008916e-11, No Iterations 94
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.010416e-11, Final residual = 9.010416e-11, No Iterations 0
+time step continuity errors : sum local = 1.200961e-13, global = 5.736657e-15, cumulative = -4.0075e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.030474e-09, Final residual = 9.941467e-11, No Iterations 94
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.05977e-10, Final residual = 8.465216e-11, No Iterations 54
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 9.444194e-11, Final residual = 9.444194e-11, No Iterations 0
+time step continuity errors : sum local = 1.236762e-13, global = -4.110911e-15, cumulative = -4.007504e-09
+smoothSolver:  Solving for omega, Initial residual = 8.244907e-07, Final residual = 5.370748e-09, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 1.580205e-06, Final residual = 1.730798e-10, No Iterations 3
+ExecutionTime = 67.83 s  ClockTime = 68 s
+
+Courant Number mean: 0.0009877762 max: 1.024936
+Interface Courant Number mean: 3.146788e-06 max: 0.04671714
+deltaT = 7.821053e-07
+Time = 0.000503363
+
+PIMPLE: iteration 1
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.68 s
+Mesh Courant Number mean: 7.800406e-05 max: 0.04074765
+smoothSolver:  Solving for alpha.water, Initial residual = 1.267797e-06, Final residual = 4.079065e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 0.0002734648, Final residual = 4.403734e-09, No Iterations 612
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.522277e-05, Final residual = 1.475395e-08, No Iterations 146
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.269745e-07, Final residual = 1.21135e-10, No Iterations 483
+time step continuity errors : sum local = 1.167772e-13, global = -5.771577e-14, cumulative = -4.007562e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 3.847161e-06, Final residual = 3.32373e-09, No Iterations 632
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 7.560101e-08, Final residual = 7.450307e-11, No Iterations 510
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.699186e-09, Final residual = 9.796854e-11, No Iterations 18
+time step continuity errors : sum local = 3.156654e-14, global = -3.782307e-15, cumulative = -4.007566e-09
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 7.15573e-08, Final residual = 7.701792e-11, No Iterations 623
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.476577e-09, Final residual = 8.207917e-11, No Iterations 98
+DILUPBiCGStab:  Solving for p_rgh, Initial residual = 1.044125e-10, Final residual = 8.921005e-11, No Iterations 1
+time step continuity errors : sum local = 5.676754e-14, global = -3.90018e-14, cumulative = -4.007605e-09
+smoothSolver:  Solving for omega, Initial residual = 0.0002048328, Final residual = 2.288183e-09, No Iterations 6
+smoothSolver:  Solving for k, Initial residual = 0.0005054733, Final residual = 3.286776e-09, No Iterations 6
+PIMPLE: iteration 2
+inverseDistance : detected 2 mesh regions
+    zone:0 nCells:351564  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+    zone:1 nCells:1920  voxels:(1000 1000 1) bb:(-0.65 -1.6625 -0.1) (0.65 1.5 0.1)
+Overset analysis : nCells : 353484
+    calculated   : 334204
+    interpolated : 1150 (from local:0  mixed local/remote:0  remote:1150)
+    hole         : 18130
+
+Execution time for mesh.update() = 0.65 s
+Mesh Courant Number mean: 7.800406e-05 max: 0.04074765
+smoothSolver:  Solving for alpha.water, Initial residual = 7.55477e-07, Final residual = 1.898013e-12, No Iterations 4
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+MULES: Correcting alpha.water
+Phase-1 volume fraction = 0.1046834  Min(alpha.water) = 0  Max(alpha.water) = 1
