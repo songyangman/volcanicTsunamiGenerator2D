@@ -9,7 +9,7 @@ echo "END mesh generation and case preparation....."
 
 echo "Start Running"
 
-echo "Decompose case on 32 cores"
+echo "Decompose case on 28 cores"
 (cd background && decomposePar -force > log.decomposePar)
 echo "RenumberMesh for parallelisation optimization"
 (cd background && mpirun --oversubscribe -np 28 renumberMesh -parallel -overwrite > log.renumberMesh)
