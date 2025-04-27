@@ -13,6 +13,7 @@ FoamFile
     object      fvSolution;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
 solvers
 {
 
@@ -47,8 +48,8 @@ solvers
     {
         solver          PBiCGStab;
         preconditioner  DILU;
-        tolerance       1e-10;//1e-10;
-        relTol          0.001;
+        tolerance       1e-07;//1e-11;
+        relTol          0.01;
     }
 
     p_rghFinal
@@ -60,11 +61,11 @@ solvers
     "pcorr.*"
     {
         $p_rghFinal;
-        preconditioner  DILU;//DIC;
+        preconditioner  DIC;
         relTol          0;
     }
 
-    "(U|k|epsilon|omega).*"
+    "(U|k|epsilon).*"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
@@ -78,22 +79,22 @@ PIMPLE
     momentumPredictor   no;
     nOuterCorrectors    2;
     nCorrectors         3;
-    nNonOrthogonalCorrectors 2;
+    nNonOrthogonalCorrectors 0;
 
     ddtCorr                    yes;
-    correctPhi                 yes;//no;
+    correctPhi                 no;
     checkMeshCourantNo  yes;
 
-    moveMeshOuterCorrectors yes;//no;
+    moveMeshOuterCorrectors no;
     turbOnFinalIterOnly no;
 
-    oversetAdjustPhi    yes;//no;
+    oversetAdjustPhi    no;
 }
 
 relaxationFactors
 {
     fields
-    {   //p_rgh   0.3;
+    {
     }
     equations
     {
