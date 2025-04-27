@@ -60,7 +60,7 @@ solvers
     "pcorr.*"
     {
         $p_rghFinal;
-        preconditioner  DIC;//DILU;
+        preconditioner  DILU;//DIC;
         relTol          0;
     }
 
