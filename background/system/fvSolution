@@ -48,7 +48,7 @@ solvers
     {
         solver          PBiCGStab;
         preconditioner  DILU;
-        tolerance       1e-07;//1e-11;
+        tolerance       1e-5;//1e-11;
         relTol          0.01;
     }
 
@@ -76,7 +76,7 @@ solvers
 
 PIMPLE
 {
-    momentumPredictor   no;
+    momentumPredictor   yes;//no;
     nOuterCorrectors    2;
     nCorrectors         3;
     nNonOrthogonalCorrectors 0;
