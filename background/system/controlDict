@@ -35,7 +35,7 @@ runTimeModifiable yes;
 adjustTimeStep  yes;
 
 maxCo           0.9;//1;
-maxAlphaCo      0.9;//1;
+maxAlphaCo      0.2;//1;
 maxDeltaT       1;
 
 // ************************************************************************* //
