@@ -13,7 +13,7 @@ FoamFile
     object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-numberOfSubdomains 40;
+numberOfSubdomains 30;
 
 method          scotch;
 //method          hierarchical;
