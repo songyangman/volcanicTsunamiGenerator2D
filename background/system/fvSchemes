@@ -58,7 +58,7 @@ oversetInterpolation
     searchBox (-0.65 -1.6625 -0.1) (0.65 1.5 0.1);
     searchBoxDivisions  (500 500 1);
      holeLayers          4;
-      useLayer            1;
+    useLayer            1;
 }
 
 oversetInterpolationSuppressed
