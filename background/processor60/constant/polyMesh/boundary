@@ -1,0 +1,238 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+26
+(
+    left_1
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       6851;
+    }
+    frontAndBack_1
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          7002;
+        startFace       6851;
+    }
+    top_1
+    {
+        type            patch;
+        nFaces          0;
+        startFace       13853;
+    }
+    bottom_1
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    frontAndBack_2
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       13853;
+    }
+    top_2
+    {
+        type            patch;
+        nFaces          0;
+        startFace       13853;
+    }
+    right_3
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    frontAndBack_3
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       13853;
+    }
+    top_3
+    {
+        type            patch;
+        nFaces          0;
+        startFace       13853;
+    }
+    bottom_3
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    left_4
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    right_4
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    frontAndBack_4
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       13853;
+    }
+    bottom_4
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    oversetPatch
+    {
+        type            overset;
+        inGroups        1(overset);
+        nFaces          0;
+        startFace       13853;
+    }
+    frontAndBack
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       13853;
+    }
+    movingObject
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       13853;
+    }
+    procBoundary60to34
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          6;
+        startFace       13853;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    34;
+    }
+    procBoundary60to43
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          14;
+        startFace       13859;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    43;
+    }
+    procBoundary60to54
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          29;
+        startFace       13873;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    54;
+    }
+    procBoundary60to55
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          16;
+        startFace       13902;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    55;
+    }
+    procBoundary60to59
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          25;
+        startFace       13918;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    59;
+    }
+    procBoundary60to61
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          73;
+        startFace       13943;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    61;
+    }
+    procBoundary60to89
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          67;
+        startFace       14016;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    89;
+    }
+    procBoundary60to91
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          13;
+        startFace       14083;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    91;
+    }
+    procBoundary60to92
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          59;
+        startFace       14096;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        60;
+        neighbProcNo    92;
+    }
+)
+
+// ************************************************************************* //
