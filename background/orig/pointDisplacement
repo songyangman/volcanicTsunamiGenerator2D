@@ -9,33 +9,38 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      controlDict;
+    class       pointVectorField;
+    object      pointDisplacement;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-libs            ("liboverset.so");
+dimensions      [0 1 0 0 0 0 0];
 
-application     overInterDyMFoam ;
+internalField   uniform (0 0 0);
 
-startFrom       latestTime;
-startTime       0.0;
-stopAt          endTime;
-endTime         1;//0.05
-deltaT          0.00005;
-writeControl    adjustableRunTime;
-writeInterval   0.00005;//0.01;
-purgeWrite      0;
-writeFormat     ascii;
-writePrecision  7;
-writeCompression yes;
-timeFormat      general;
-timePrecision   6;
-runTimeModifiable yes;
-adjustTimeStep  yes;
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
 
-maxCo           0.5;//1;
-maxAlphaCo      0.5;//1;
-maxDeltaT       1;
+    "(left_1|bottom_1|right_3|bottom_3|left_4|right_4|bottom_4)"
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    "(top_1|top_2|top_3|top_4|bottom_2|right_1|left_2|right_2|left_3)"
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    movingObject
+    {
+        type            zeroGradient;
+    }
+    patchOverset
+    {
+        patchType       overset;
+        type            zeroGradient;
+    }
+}
 
 // ************************************************************************* //
